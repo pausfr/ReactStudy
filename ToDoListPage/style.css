@@ -1,0 +1,79 @@
+/* style.css */
+.hidden {
+  display: none;
+}
+
+.bgImage {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: -1;
+  animation: fadeIn 0.5s linear;
+}
+body {
+  background-color: #ffffff;
+  text-align: center;
+  color: #ffffff;
+  padding: 1%;
+}
+
+h2 {
+  font-size: 112px;
+  margin-top: 13%;
+  margin-bottom: 0px;
+}
+
+h1 {
+  font-weight: 100;
+  font-size: 22px;
+  margin-bottom: 10px;
+}
+
+input {
+  border: none;
+  background: transparent;
+  font-size: 22px;
+  margin: 3px;
+  text-align: center;
+  color: #ffffff;
+  border-bottom: 2px solid #ffffff;
+}
+
+input::placeholder {
+  color: rgb(0, 0, 0);
+}
+
+ul {
+  margin-left: 40%;
+}
+
+li {
+  list-style: none;
+  font-size: 20px;
+  text-align: left;
+}
+
+button {
+  border: none;
+  background: transparent;
+  font-size: 22px;
+}
+
+.showing {
+  display: block;
+  font-size: 34px;
+  margin-top: 0px;
+}
+
+#weather {
+  position: fixed;
+  right: 20px;
+  top: 40px;
+}
+#quote {
+  position: fixed;
+  right: 20px;
+  top: 20px;
+}
