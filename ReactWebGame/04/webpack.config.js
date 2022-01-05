@@ -4,7 +4,7 @@ const path = require("path");
 const ReactRefreshWebpackPlugin = require("@pmmmwh/react-refresh-webpack-plugin");
 
 module.exports = {
-  name: "word-relay-dev", // 웹팩에서 관리할 이름
+  name: "number-baseball-dev", // 웹팩에서 관리할 이름
   mode: "development", // 실서비스에서는 production으로 바꿈.
   devtool: "inline-source-map",
   resolve: {
@@ -12,7 +12,7 @@ module.exports = {
   },
   // 아래 entry는 입력을 의미, output은 출력을 의미
   entry: {
-    app: "./client",
+    app: "./WithHooksclient",
   }, // 입력 , 다른 파일이 불러오는 파일은 여기서 추가로 기입할 필요 없다. 여기선 "./WordRelay.jsx"
   module: {
     rules: [
