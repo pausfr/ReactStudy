@@ -1,6 +1,6 @@
-const React = require("react");
-const ReactDom = require("react-dom");
+// const React = require("react");
+// const ReactDom = require("react-dom");
 
-const ResponseCheck = require("./ResponseCheck");
+// const ResponseCheck = require("./ResponseCheck");
 
-ReactDom.render(<ResponseCheck />, document.querySelector("#root"));
+// ReactDom.render(<ResponseCheck />, document.querySelector("#root"));

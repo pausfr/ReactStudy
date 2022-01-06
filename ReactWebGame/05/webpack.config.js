@@ -12,7 +12,7 @@ module.exports = {
   },
   // 아래 entry는 입력을 의미, output은 출력을 의미
   entry: {
-    app: "./client",
+    app: "./WithHooksClient",
   }, // 입력 , 다른 파일이 불러오는 파일은 여기서 추가로 기입할 필요 없다. 여기선 "./WordRelay.jsx"
   module: {
     rules: [
