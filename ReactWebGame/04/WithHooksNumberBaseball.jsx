@@ -91,10 +91,3 @@ const NumberBaseball = () => {
 };
 
 export default NumberBaseball;
-
-shouldComponentUpdate(nextProps, nextState, nextContext){
-  if (this.state.counter !== nextState.counter){
-    return true;
-  }
-  return false;
-}
