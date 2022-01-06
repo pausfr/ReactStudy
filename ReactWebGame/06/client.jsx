@@ -1,6 +1,6 @@
-const React = require("react");
-const ReactDom = require("react-dom");
+// const React = require("react");
+// const ReactDom = require("react-dom");
 
-const RSP = require("./RSP");
+// const RSP = require("./RSP");
 
-ReactDom.render(<RSP />, document.querySelector("#root"));
+// ReactDom.render(<RSP />, document.querySelector("#root"));
