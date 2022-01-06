@@ -8,4 +8,4 @@ const Try = (props) => {
     </li>
   );
 };
-export default Try;
+export default React.memo(Try);

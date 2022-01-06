@@ -1,6 +1,6 @@
 const React = require("react");
 const ReactDom = require("react-dom");
 
-const NumberBaseball = require("./NumberBaseball");
+const ResponseCheck = require("./ResponseCheck");
 
-ReactDom.render(<NumberBaseball />, document.querySelector("#root"));
+ReactDom.render(<ResponseCheck />, document.querySelector("#root"));
