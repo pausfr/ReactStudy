@@ -10,7 +10,7 @@ export default function RSP() {
   const [result, setResult] = useState("");
   const [img, setImg] = useState("rock");
   const [score, setScore] = useState(0);
-  const [fight, setFight] = useState(false); //커스텀 부분
+  const [fight, setFight] = useState(false); //커스텀 부분, 가위바위보 결과 나올 땐 버튼 비활성화 위함
   const interval = useRef();
 
   useEffect(() => {
@@ -57,7 +57,7 @@ export default function RSP() {
 
   return (
     <>
-      <img src={`./img/${img}.png`}></img>
+      <img src={`./img/${img}.png`} className="image"></img>
       <div>
         <button
           id="rock"
