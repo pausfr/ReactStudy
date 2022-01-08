@@ -39,7 +39,7 @@ const NumberBaseball = () => {
       let ball = 0;
       if (tries.length >= 14) {
         // 시도 회수가 15회 이상일 때
-        setResult(`10번 넘게 틀려서 실패! 답은 ${answer.join(",")}였습니다!`);
+        setResult(`15번 넘게 틀려서 실패! 답은 ${answer.join(",")}였습니다!`);
         alert(`게임을 다시 시작합니다!`);
 
         setValue("");
