@@ -9,6 +9,7 @@ import React, {
 import Ball from "./Ball";
 
 function getWinNumbers() {
+  console.log("getWinNumbers 실행!");
   const candidate = Array(45)
     .fill()
     .map((v, i) => i + 1);
@@ -24,7 +25,8 @@ function getWinNumbers() {
 }
 
 export default function Lotto() {
-  const [winNumbers, setWinNumbers] = useState(getWinNumbers());
+  const lottoNumbers = useMemo(getWinNumbers, []);
+  const [winNumbers, setWinNumbers] = useState(lottoNumbers);
   const [winBalls, setWinBalls] = useState([]);
   const [bonus, setBonus] = useState(null);
   const [redo, setRedo] = useState(false);
@@ -45,16 +47,14 @@ export default function Lotto() {
   }, [timeouts.current]); // 의존성배열이 []이면 componentDidMount와 동일
   // 배열에 요소가 있으면 DidMount와 DidUpdate의 역할을 동시 수행
 
-  useEffect(() => {}, [winNumbers]);
-
-  const onClickRedo = () => {
+  const onClickRedo = useCallback(() => {
     setWinNumbers(getWinNumbers());
     setWinBalls([]);
     setBonus(null);
     setRedo(false);
 
     timeouts.current = [];
-  };
+  }, []); // 함수 자체를 기억해두어서 onClickRedo가 새로 생성되지 않는다.
 
   return (
     <>
