@@ -1,7 +1,7 @@
-import React from "react";
+import React, { memo } from "react";
 import Td from "./Td";
 
-export default function Tr({ rowData, rowIndex, dispatch }) {
+export default memo(function Tr({ rowData, rowIndex, dispatch }) {
   return (
     <tr>
       {Array(rowData.length)
@@ -16,4 +16,4 @@ export default function Tr({ rowData, rowIndex, dispatch }) {
         ))}
     </tr>
   );
-}
+});

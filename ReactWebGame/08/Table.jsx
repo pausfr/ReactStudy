@@ -1,4 +1,4 @@
-import React from "react";
+import React, { memo } from "react";
 import Tr from "./Tr";
 
 export default function Table({ onClick, tableData, dispatch }) {
