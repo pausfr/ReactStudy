@@ -43,7 +43,7 @@ const getTdText = (code) => {
     case CODE.NORMAL:
       return "";
     case CODE.MINE:
-      return "X";
+      return "";
     case CODE.OPENED:
       return "";
     case CODE.CLICKED_MINE:
