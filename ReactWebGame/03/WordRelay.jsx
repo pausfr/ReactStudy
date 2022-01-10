@@ -59,7 +59,7 @@ const React = require("react");
 const { useState, useRef } = React;
 
 const WordRelay = () => {
-  const [word, setWord] = useState("비비빅");
+  const [word, setWord] = useState("바밤바");
   const [value, setValue] = useState("");
   const [result, setResult] = useState("");
 

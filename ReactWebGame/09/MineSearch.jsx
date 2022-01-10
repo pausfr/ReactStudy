@@ -281,7 +281,7 @@ export default function MineSearch() {
   return (
     <TableContext.Provider value={value}>
       <Form />
-      <div>{timer}</div>
+      <div>타이머: {timer}</div>
       <Table />
       <div>{result}</div>
     </TableContext.Provider>
