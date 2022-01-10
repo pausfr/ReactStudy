@@ -1,4 +1,4 @@
-import React, { useCallback, useContext } from "react";
+import React, { useCallback, useContext, memo, useMemo } from "react";
 import {
   TableContext,
   CODE,
@@ -59,9 +59,9 @@ const getTdText = (code) => {
   }
 };
 
-export default function Td({ rowIndex, cellIndex }) {
+export default memo(function Td({ rowIndex, cellIndex }) {
   const { tableData, dispatch, halted } = useContext(TableContext);
-  const OnClickTd = useCallback(() => {
+  const onClickTd = useCallback(() => {
     if (halted) {
       return;
     }
@@ -110,12 +110,22 @@ export default function Td({ rowIndex, cellIndex }) {
   );
 
   return (
+    <RealTd
+      onClickTd={onClickTd}
+      onRightClickTd={onRightClickTd}
+      data={tableData[rowIndex][cellIndex]}
+    />
+  );
+});
+
+const RealTd = memo(({ onClickTd, onRightClickTd, data }) => {
+  return (
     <td
-      style={getTdStyle(tableData[rowIndex][cellIndex])}
-      onClick={OnClickTd}
+      style={getTdStyle(data)}
+      onClick={onClickTd}
       onContextMenu={onRightClickTd} // 오른쪽 클릭 처리하는 이벤트
     >
-      {getTdText(tableData[rowIndex][cellIndex])}
+      {getTdText(data)}
     </td>
   );
-}
+});
