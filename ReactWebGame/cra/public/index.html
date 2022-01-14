@@ -1,0 +1,61 @@
+<html>
+    <meta charset="UTF-8" />
+    <title>웹게임</title>
+    <style>
+    #table {
+      border-collapse: collapse;
+    }
+    #td {
+      border: 1px solid black;
+      width: 40px;
+      height: 40px;
+      text-align: center;
+    }
+    #screen {
+      width: 300px;
+      height: 200px;
+      text-align: center;
+      user-select: none;
+    }
+    #screen.waiting {
+      background-color: orange;
+    }
+    #screen.ready {
+      background-color: red;
+      color: white;
+    }
+    #screen.now {
+      background-color: greenyellow;
+    }
+    .ball {
+      display: inline-block;
+      border: 1px solid black;
+      border-radius: 20px;
+      width: 40px;
+      height: 40px;
+      line-height: 40px;
+      font-size: 20px;
+      text-align: center;
+      margin-right: 20px;
+    }
+    .image {
+      width: 183px;
+      height: 183px;
+    }
+    .game{
+      position:absolute;
+      top: 20%;
+      left: 5%;
+    }
+    .gameGreeting{
+      position: absolute;
+      top: 10%;
+      left: 5%;
+    }
+    </style>
+  </head>
+  <body>
+    <div id="root"></div>
+    <script src="./dist/app.js"></script>
+  </body>
+</html>

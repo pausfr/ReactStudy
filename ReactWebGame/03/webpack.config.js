@@ -34,6 +34,10 @@ module.exports = {
         }, // 바벨의 옵션을 여기 넣어줌
         exclude: path.join(__dirname, "node_modules"),
       },
+      {
+        test: /\.s?[ac]ss$/,
+        use: ["style-loader", "css-loader", "sass-loader"],
+      },
     ],
   },
   plugins: [new ReactRefreshWebpackPlugin()],

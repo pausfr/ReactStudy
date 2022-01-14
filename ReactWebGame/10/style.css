@@ -7,3 +7,30 @@ td {
   height: 40px;
   text-align: center;
 }
+#screen {
+  width: 300px;
+  height: 200px;
+  text-align: center;
+  user-select: none;
+}
+#screen.waiting {
+  background-color: orange;
+}
+#screen.ready {
+  background-color: red;
+  color: white;
+}
+#screen.now {
+  background-color: greenyellow;
+}
+.ball {
+  display: inline-block;
+  border: 1px solid black;
+  border-radius: 20px;
+  width: 40px;
+  height: 40px;
+  line-height: 40px;
+  font-size: 20px;
+  text-align: center;
+  margin-right: 20px;
+}

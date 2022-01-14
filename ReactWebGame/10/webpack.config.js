@@ -30,7 +30,10 @@ module.exports = {
             ],
             "@babel/preset-react",
           ],
-          plugins: ["react-refresh/babel"], // 최신 문법을 리로딩할 때 할 리로딩 기능도 해줌
+          plugins: [
+            "react-refresh/babel",
+            "@babel/plugin-proposal-class-properties",
+          ], // 최신 문법을 리로딩할 때 할 리로딩 기능도 해줌
         }, // 바벨의 옵션을 여기 넣어줌
         exclude: path.join(__dirname, "node_modules"),
       },
@@ -43,6 +46,7 @@ module.exports = {
     filename: "[name].js",
   }, // 출력
   devServer: {
+    historyApiFallback: true,
     devMiddleware: { publicPath: "/dist" },
     static: { directory: path.resolve(__dirname) }, // 스태틱은 실제로 존재하는 정적 파일의 경로 기입
     hot: true,
