@@ -15,6 +15,7 @@ export default function LikeButton({ nickname }) {
       setTmp(false);
       cnt.current++;
     }
+    // test
   };
 
   return (
